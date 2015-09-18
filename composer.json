@@ -2,6 +2,8 @@
     "name": "gyg/thrift-lib",
     "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo",
     "autoload": {
-        "psr-0": { "Thrift\\": "php/src/" }
+        "classmap": [
+            "php/src"
+        ]
     }
 }
