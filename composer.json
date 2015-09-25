@@ -1,9 +1,4 @@
 {
     "name": "gyg/thrift-lib",
-    "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo",
-    "autoload": {
-        "classmap": [
-            "php/src"
-        ]
-    }
+    "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo"
 }
