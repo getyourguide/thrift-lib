@@ -13,7 +13,5 @@
 require_once ($GLOBALS['HACKLIB_ROOT']);
 interface IThriftClient {
   public function getEventHandler();
-  public function setEventHandler($handler);
-  public function getAsyncHandler();
-  public function setAsyncHandler($handler);
+  public function setEventHandler(TClientEventHandler $handler);
 }

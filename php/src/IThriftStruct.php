@@ -13,6 +13,6 @@
 require_once ($GLOBALS['HACKLIB_ROOT']);
 interface IThriftStruct {
   public function getName();
-  public function read($input);
-  public function write($input);
+  public function read(TProtocol $input);
+  public function write(TProtocol $input);
 }

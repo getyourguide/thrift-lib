@@ -13,6 +13,6 @@
 require_once ($GLOBALS['HACKLIB_ROOT']);
 interface IThriftProcessor {
   public function getEventHandler();
-  public function setEventHandler($handler);
-  public function process($input, $output);
+  public function setEventHandler(TProcessorEventHandler $handler);
+  public function process(TProtocol $input, TProtocol $output);
 }
