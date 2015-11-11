@@ -1,4 +1,17 @@
 {
     "name": "gyg/thrift-lib",
-    "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo"
+    "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo",
+    "autoload": {
+        "files": ["set_hacklib_global.php"],
+        "classmap": [
+            "php/src/",
+            "php/src/protocol/",
+            "php/src/protocol/binary/",
+            "php/src/protocol/compact/",
+            "php/src/protocol/simplejson/",
+            "php/src/protocol/simplephpobject/",
+            "php/src/server/"
+        ],
+        "psr-4": { "Gyg\\Thrift\\Utility\\": "utilities/php" }
+    }
 }
