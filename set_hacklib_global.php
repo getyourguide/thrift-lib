@@ -4,4 +4,4 @@
  * as soon as the library is namespaced and the requires are retired this will hopefully no longer
  * be needed.
  */
-$GLOBALS['HACKLIB_ROOT'] = '../vendor/gyg/hhvm-h2tp-resources/src/hacklib.php';
+$GLOBALS['HACKLIB_ROOT'] = __DIR__.'/../../gyg/hhvm-h2tp-resources/src/hacklib.php';
