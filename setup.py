@@ -22,6 +22,7 @@
 from distutils.core import setup, Extension as _Extension
 from distutils.command.build_ext import build_ext as _build_ext
 from distutils.errors import CCompilerError, DistutilsError, CompileError
+from setuptools import find_packages
 
 import sys
 
@@ -71,13 +72,7 @@ setup(name = 'Thrift',
       author_email = 'thrift-dev@incubator.apache.org',
       url = 'http://incubator.apache.org/thrift/',
       license = 'Apache License 2.0',
-      packages = [
-        'thrift',
-        'thrift.protocol',
-        'thrift.transport',
-        'thrift.server',
-        'thrift.util',
-      ],
+      packages = find_packages("py/"),
       package_dir = {'thrift' : 'py/'},
       ext_modules = [fastbinarymod, cppservermod],
       cmdclass={'build_ext': build_ext},
