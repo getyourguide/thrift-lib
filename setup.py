@@ -65,15 +65,16 @@ cppservermod = Extension(
     optional=True,
 )
 
-setup(name = 'Thrift',
+setup(name = 'Thrift (GYG)',
       version = '0.1',
-      description = 'Thrift Python Libraries',
+      description = 'GYG Thrift Python Libraries',
       author = 'Thrift Developers',
       author_email = 'thrift-dev@incubator.apache.org',
       url = 'http://incubator.apache.org/thrift/',
       license = 'Apache License 2.0',
-      packages = find_packages("py/"),
-      package_dir = {'thrift' : 'py/'},
+      packages = find_packages("py"),
+      package_dir = {'thrift' : 'py'},
+      include_package_data = True,
       ext_modules = [fastbinarymod, cppservermod],
       cmdclass={'build_ext': build_ext},
       )
