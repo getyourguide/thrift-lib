@@ -22,7 +22,6 @@
 from distutils.core import setup, Extension as _Extension
 from distutils.command.build_ext import build_ext as _build_ext
 from distutils.errors import CCompilerError, DistutilsError, CompileError
-from setuptools import find_packages
 
 import sys
 
@@ -65,16 +64,21 @@ cppservermod = Extension(
     optional=True,
 )
 
-setup(name = 'Thrift (GYG)',
+setup(name = 'Thrift',
       version = '0.1',
-      description = 'GYG Thrift Python Libraries',
+      description = 'Thrift Python Libraries',
       author = 'Thrift Developers',
       author_email = 'thrift-dev@incubator.apache.org',
       url = 'http://incubator.apache.org/thrift/',
       license = 'Apache License 2.0',
-      packages = find_packages("py"),
+      packages = [
+        'thrift',
+        'thrift.protocol',
+        'thrift.transport',
+        'thrift.server',
+        'thrift.util',
+      ],
       package_dir = {'thrift' : 'py'},
-      include_package_data = True,
       ext_modules = [fastbinarymod, cppservermod],
       cmdclass={'build_ext': build_ext},
       )
