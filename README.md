@@ -1,4 +1,9 @@
 # thrift-lib
-This repository is the home of thrift library code (check readme for more info)
+This repository is the home of thrift library code
 
-https://github.com/facebook/hhvm/tree/master/hphp/hack/src/h2tp/resources
+Essentially a slimmed down version of https://github.com/getyourguide/fbthrift
+
+The following two directories where replicated:
+
+- https://github.com/getyourguide/fbthrift/tree/master/thrift/lib/php
+- https://github.com/getyourguide/fbthrift/tree/master/thrift/lib/py
