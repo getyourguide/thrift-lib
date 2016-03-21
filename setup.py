@@ -64,7 +64,7 @@ cppservermod = Extension(
     optional=True,
 )
 
-setup(name = 'Thrift',
+setup(name = 'FBThrift',
       version = '0.1',
       description = 'Thrift Python Libraries',
       author = 'Thrift Developers',
