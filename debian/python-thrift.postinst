@@ -1,0 +1,7 @@
+#!/bin/sh
+
+# We need to override the default postinst script, because of python2.7 
+# compatibility issues. 
+pycompile -p python-thrift || true
+
+echo "Post install script done."
