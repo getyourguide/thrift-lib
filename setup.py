@@ -50,7 +50,7 @@ class build_ext(_build_ext):
 
 fastbinarymod = Extension(
     'thrift.protocol.fastbinary',
-    sources = ['protocol/fastbinary.c'],
+    sources = ['py/protocol/fastbinary.c'],
     optional=True,
 )
 
@@ -58,13 +58,13 @@ version_info = sys.version_info
 boost_python = "boost_python-py{}{}".format(version_info[0], version_info[1])
 cppservermod = Extension(
     'thrift.server.CppServerWrapper',
-    sources = ['server/CppServerWrapper.cpp'],
+    sources = ['py/server/CppServerWrapper.cpp'],
     libraries=[boost_python, 'thriftcpp2', 'folly', 'wangle'],
     extra_compile_args=['-std=c++0x'],
     optional=True,
 )
 
-setup(name = 'Thrift',
+setup(name = 'FBThrift',
       version = '0.1',
       description = 'Thrift Python Libraries',
       author = 'Thrift Developers',
@@ -78,7 +78,7 @@ setup(name = 'Thrift',
         'thrift.server',
         'thrift.util',
       ],
-      package_dir = {'thrift' : '.'},
+      package_dir = {'thrift' : 'py'},
       ext_modules = [fastbinarymod, cppservermod],
       cmdclass={'build_ext': build_ext},
       )
