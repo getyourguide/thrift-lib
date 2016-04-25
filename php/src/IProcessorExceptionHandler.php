@@ -1,9 +1,9 @@
 <?php
 
-interface IProcessorErrorHandler
+interface IProcessorExceptionHandler
 {
 	/**
-	 * Custom error handling function
+	 * Custom exception handler
 	 *
 	 * It may or may not re-throw the exception
 	 *
