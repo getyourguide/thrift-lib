@@ -262,6 +262,11 @@ class TGygSimpleJSONProtocol extends TProtocol
         $this->writeJSONString($str);
     }
 
+    public function writeFloat($flt)
+    {
+        return $this->writeJSONDouble($flt);
+    }
+
     /**
      * Reading methods.
      *
@@ -361,11 +366,6 @@ class TGygSimpleJSONProtocol extends TProtocol
     }
 
     public function readString(&$str)
-    {
-        throw new TException("Not implemented");
-    }
-
-    public function writeFloat($flt)
     {
         throw new TException("Not implemented");
     }
