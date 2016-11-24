@@ -18,3 +18,7 @@ Build:
 * Run: `python setup.py --command-packages=stdeb.command bdist_deb`
 
 The generated .deb file will be in the `./deb_dist` directory.
+
+## Notes
+
+We have included a TGygSimpleJsonProtocol adapted from the Apache Thrift implementation - This is only in the PHP implementation.
