@@ -2,7 +2,9 @@
     "name": "gyg/thrift-lib",
     "description": "Some libraries out of the main facebook/hhvm repo to avoid the inclusion of the full repo",
     "autoload": {
-        "files": ["set_hacklib_global.php"],
+        "files": [
+            "set_hacklib_global.php"
+        ],
         "classmap": [
             "php/src/",
             "php/src/protocol/",
@@ -12,6 +14,17 @@
             "php/src/protocol/simplephpobject/",
             "php/src/server/"
         ],
-        "psr-4": { "Gyg\\Thrift\\Utility\\": "utilities/php" }
-    }
+        "psr-4": {
+            "Gyg\\Thrift\\Utility\\": "utilities/php"
+        }
+    },
+    "require": {
+        "gyg/hhvm-h2tp-resources": "1.0.0"
+    },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/getyourguide/hhvm-h2tp-resources"
+        }
+    ]
 }
