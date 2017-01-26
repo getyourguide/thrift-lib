@@ -20,7 +20,7 @@
         }
     },
     "require": {
-        "gyg/hhvm-h2tp-resources": "1.0.1"
+        "gyg/hhvm-h2tp-resources": "1.0.2"
     },
     "repositories": [
         {
