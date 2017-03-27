@@ -40,8 +40,9 @@ abstract class TBinaryProtocolBase extends TProtocol {
     $this->memory_limit = self::getBytes(ini_get('memory_limit'));
   }
   public static function getBytes($notation) {
-    $val = trim($notation);
-    $last = strtolower($val[strlen($val) - 1]);
+    $notation = trim($notation);
+    $last = strtolower($notation[strlen($notation) - 1]);
+    $val = (int)$notation;
     switch ($last) {
       case 'g':
         $val *= 1024; // FALLTHROUGH
